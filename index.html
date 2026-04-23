@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PWA Carrito</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Carrito EXPRESS</h1>
+
+  <input type="text" id="producto" placeholder="Producto">
+  <button onclick="agregarProducto()">Agregar</button>
+
+  <h2>Lista:</h2>
+  <ul id="lista"></ul>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
